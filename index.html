@@ -1,5 +1,33 @@
 ---
 layout: default
 ---
+<h1 class="text-5xl font-bold mb-10">Our Wedding</h1>
 
-<h1 class="text-white text-4xl font-semibold">Jekyll Starter Tailwind</h1>
+<img class="w-full rounded-lg mb-8" src="{{ site.baseurl }}/images/piggy-back.jpeg">
+<!-- <div>
+  <div class="flex items-center justify-center w-64">
+    <img class="w-full" src="{{ site.baseurl }}/images/blue-watercolor-brush-stroke.png">
+    <h2 class="w-full text-center text-3xl font-cursive text-white" style="margin-left: -100%;">Our Wedding</h2>
+  </div>
+</div> -->
+<div class="text-lg">
+  Manchester, Vermont<br>
+  Saturday, August 28, 2021<br>
+  <span id="countDown"></span> Days to go 🎉
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 28, 2021 6:00:00").getTime();
+// Get today's date and time
+var now = new Date().getTime();
+// Find the distance between now and the count down date
+var distance = countDownDate - now;
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+document.getElementById('countDown').innerHTML = days;
+// If the count down is finished, write some text
+if (distance < 0) {
+  clearInterval(x);
+  document.getElementById('countDown').innerHTML = '0';
+}
+</script>

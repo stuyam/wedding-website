@@ -3,10 +3,42 @@
 
 {% include header.html %}
 
-<main
-  class="bg-teal-500 flex h-screen items-center justify-center w-full"
->
-  {{ content }}
+<main class="flex min-h-screen w-full font-serif">
+  <nav class="relative w-64 h-screen" style="flex: 0 0 16rem;">
+    <div class="fixed flex flex-col inset-0 w-64 p-6 bg-gray-100 border-r border-gray-300">
+      <div class="flex-grow space-y-3">
+        <h1 class="text-3xl font-bold leading-snug">Alyssa & Stuart's Wedding</h1>
+        <ul class="text-lg">
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/">💍 Our Wedding</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="">👨‍👩‍👧‍👦 Bridal Party</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="">🎁 Registry</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/things-to-do.html">🧭 Things To Do</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="">🛌 Hotels</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="">📸 Photos</a>
+          </li>
+        </ul>
+      </div>
+      <img class="w-full" src="{{ site.baseurl }}/images/green-flowers.png">
+    </div>
+  </nav>
+  <section class="relative w-full">
+    <img class="absolute top-0 left-0 z-10 w-40 p-4" src="{{ site.baseurl }}/images/corner-left.png">
+    <img class="absolute top-0 right-0 z-10 w-40 p-4" src="{{ site.baseurl }}/images/corner-right.png">
+    <div class="relative flex-grow max-w-4xl mx-auto p-10 z-20">
+      {{ content }}
+    </div>
+  </section>
 </main>
 
 {% include footer.html %}
