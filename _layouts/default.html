@@ -3,9 +3,38 @@
 
 {% include header.html %}
 
+<script>
+  $(function() {
+    $('#toggle').click(function() {
+      var nav = $('nav')
+      // Show menu
+      if (nav.hasClass('hidden')) {
+        nav.removeClass('hidden')
+        $('#hamburger').addClass('hidden')
+        $('#close').removeClass('hidden')
+      // Hide menu
+      } else {
+        nav.addClass('hidden')
+        $('#close').addClass('hidden')
+        $('#hamburger').removeClass('hidden')
+      }
+    })
+  })
+</script>
+
 <main class="flex min-h-screen w-full font-serif">
-  <nav class="relative w-64 h-screen" style="flex: 0 0 16rem;">
-    <div class="fixed flex flex-col inset-0 w-64 p-6 bg-gray-100 border-r border-gray-300">
+  <div class="absolute p-2 right-0 rounded m-4 shadow cursor-pointer hover:shadow-md z-50 md:hidden bg-white" id="toggle">
+    <div id="hamburger">
+      <div class="w-8 bg-gray-500 rounded-full" style="height: 2px; margin-bottom: 6px;"></div>
+      <div class="w-8 bg-gray-500 rounded-full" style="height: 2px; margin-bottom: 6px;"></div>
+      <div class="w-8 bg-gray-500 rounded-full" style="height: 2px;"></div>
+    </div>
+    <div id="close" class="hidden">
+      <img class="w-6 h-6" src="{{ site.baseurl }}/images/x.svg">
+    </div>
+  </div>
+  <nav class="absolute inset-0 h-screen hidden z-40 md:relative md:w-64 md:block" style="flex: 0 0 16rem;">
+    <div class="fixed flex flex-col inset-0 p-6 bg-gray-100 border-r border-gray-300 md:w-64">
       <div class="flex-grow space-y-3">
         <h1 class="text-3xl font-bold leading-snug">Alyssa & Stuart's Wedding</h1>
         <ul class="text-lg">
@@ -13,31 +42,39 @@
             <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/">💍 Our Wedding</a>
           </li>
           <li>
-            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="">👨‍👩‍👧‍👦 Bridal Party</a>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/bridal-party.html">👨‍👩‍👧‍👦 Bridal Party</a>
           </li>
           <li>
-            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="">🎁 Registry</a>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/registry.html">🎁 Registry</a>
           </li>
           <li>
             <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/things-to-do.html">🧭 Things To Do</a>
           </li>
           <li>
-            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="">🛌 Hotels</a>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/hotels.html">🛌 Hotels</a>
           </li>
           <li>
-            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="">📸 Photos</a>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/photos.html">📸 Photos</a>
           </li>
         </ul>
       </div>
-      <img class="w-full" src="{{ site.baseurl }}/images/green-flowers.png">
+      <img class="w-full max-w-xs mx-auto" src="{{ site.baseurl }}/images/green-flowers.png">
     </div>
   </nav>
   <section class="relative w-full">
-    <img class="absolute top-0 left-0 z-10 w-40 p-4" src="{{ site.baseurl }}/images/corner-left.png">
-    <img class="absolute top-0 right-0 z-10 w-40 p-4" src="{{ site.baseurl }}/images/corner-right.png">
-    <div class="relative flex-grow max-w-4xl mx-auto p-10 z-20">
-      {{ content }}
+    <!-- <img class="absolute top-0 left-0 z-10 w-40 p-4" src="{{ site.baseurl }}/images/corner-left.png"> -->
+    <!-- <img class="absolute top-0 right-0 z-10 w-40 p-4" src="{{ site.baseurl }}/images/corner-right.png"> -->
+    <div class="flex min-h-screen flex-col">
+      <div class="flex-1 flex flex-col mx-auto p-8 max-w-4xl w-full">
+        <div class="w-full">
+          {{ content }}
+        </div>
+      </div>
+      <div class="w-full text-center p-4 pin-b">
+        <div class="text-center text-gray-600 p-4">Have questions about the wedding? Email us at <a class="text-blue-600" href="mailto:alyssastuartwedding@gmail.com">alyssastuartwedding@gmail.com</a></div>
+      </div>
     </div>
+
   </section>
 </main>
 
