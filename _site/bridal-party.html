@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Alyssa & Stuart's Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Meddon&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  </head>
+  <body></body>
+</html>
+
+
+<script>
+  $(function() {
+    $('#toggle').click(function() {
+      var nav = $('nav')
+      // Show menu
+      if (nav.hasClass('hidden')) {
+        nav.removeClass('hidden')
+        $('#hamburger').addClass('hidden')
+        $('#close').removeClass('hidden')
+      // Hide menu
+      } else {
+        nav.addClass('hidden')
+        $('#close').addClass('hidden')
+        $('#hamburger').removeClass('hidden')
+      }
+    })
+  })
+</script>
+
+<main class="flex min-h-screen w-full font-serif">
+  <div class="absolute p-2 right-0 rounded m-4 shadow cursor-pointer hover:shadow-md z-50 md:hidden bg-white" id="toggle">
+    <div id="hamburger">
+      <div class="w-8 bg-gray-500 rounded-full" style="height: 2px; margin-bottom: 6px;"></div>
+      <div class="w-8 bg-gray-500 rounded-full" style="height: 2px; margin-bottom: 6px;"></div>
+      <div class="w-8 bg-gray-500 rounded-full" style="height: 2px;"></div>
+    </div>
+    <div id="close" class="hidden">
+      <img class="w-6 h-6" src="/images/x.svg">
+    </div>
+  </div>
+  <nav class="absolute inset-0 h-screen hidden z-40 md:relative md:w-64 md:block" style="flex: 0 0 16rem;">
+    <div class="fixed flex flex-col inset-0 p-6 bg-gray-100 border-r border-gray-300 md:w-64">
+      <div class="flex-grow space-y-3">
+        <h1 class="text-3xl font-bold leading-snug">Alyssa & Stuart's Wedding</h1>
+        <ul class="text-lg">
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/">💍 Our Wedding</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/bridal-party.html">👨‍👩‍👧‍👦 Bridal Party</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/registry.html">🎁 Registry</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/things-to-do.html">🧭 Things To Do</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/hotels.html">🛌 Hotels</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow" href="/photos.html">📸 Photos</a>
+          </li>
+        </ul>
+      </div>
+      <img class="w-full max-w-xs mx-auto" src="/images/green-flowers.png">
+    </div>
+  </nav>
+  <section class="relative w-full">
+    <!-- <img class="absolute top-0 left-0 z-10 w-40 p-4" src="/images/corner-left.png"> -->
+    <!-- <img class="absolute top-0 right-0 z-10 w-40 p-4" src="/images/corner-right.png"> -->
+    <div class="flex min-h-screen flex-col">
+      <div class="flex-1 flex flex-col mx-auto p-8 max-w-4xl w-full">
+        <div class="w-full">
+          <h1 class="text-5xl font-bold">Bridal Party</h1>
+
+<p class="bg-red-600 inline-block px-2 rounded-full text-white">Coming soon</p>
+
+        </div>
+      </div>
+      <div class="w-full text-center p-4 pin-b">
+        <div class="text-center text-gray-600 p-4">Have questions about the wedding? Email us at <a class="text-blue-600" href="mailto:alyssastuartwedding@gmail.com">alyssastuartwedding@gmail.com</a></div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+</body>
+</html>
