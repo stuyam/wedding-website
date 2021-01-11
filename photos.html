@@ -1,6 +1,15 @@
 ---
 layout: default
 ---
-<h1 class="text-5xl font-bold">Photos</h1>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-<p class="bg-red-600 inline-block px-2 rounded-full text-white">Coming soon</p>
+<h1 class="text-5xl font-bold mb-5">Engagement Photos</h1>
+
+<div class="card-column-2 lg:card-column-3">
+  {% for index in (1..83) %}
+    <a class="inline-block w-full flex flex-col mb-4" data-fancybox="gallery" href="{{ site.baseurl }}/images/engagement/{{ index }}.jpg">
+      <img src="{{ site.baseurl }}/images/engagement/{{ index }}.jpg">
+    </a>
+  {% endfor %}
+</div>
