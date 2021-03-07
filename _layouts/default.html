@@ -36,8 +36,8 @@
   <nav class="absolute inset-0 h-screen hidden z-40 md:relative md:w-64 md:block" style="flex: 0 0 16rem;">
     <div class="fixed flex flex-col inset-0 p-6 bg-gray-100 border-r border-gray-300 md:w-64">
       <div class="flex-grow space-y-3">
-        <h1 class="text-3xl font-bold leading-snug">Alyssa & Stuart's Wedding</h1>
-        <ul class="text-lg">
+        <a href="/" class="block text-3xl font-bold leading-snug">Alyssa & Stuart's Wedding</a>
+        <ul class="text-lg space-y-1">
           <li>
             <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow {% if page.url == '/' %}bg-white shadow{% endif %}" href="/">💍 Our Wedding</a>
           </li>
@@ -46,6 +46,9 @@
                     </li> -->
           <li>
             <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow {% if page.url == '/hotels.html' %}bg-white shadow{% endif %}" href="/hotels.html">🛌 Hotels</a>
+          </li>
+          <li>
+            <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow {% if page.url == '/airports.html' %}bg-white shadow{% endif %}" href="/airports.html">🛬 Airports</a>
           </li>
           <li>
             <a class="inline-block w-full py-2 px-3 rounded-md hover:bg-white hover:shadow {% if page.url == '/registry.html' %}bg-white shadow{% endif %}" href="/registry.html">🎁 Registry</a>
@@ -71,7 +74,7 @@
         </div>
       </div>
       <div class="w-full text-center p-4 pin-b">
-        <div class="text-center text-gray-600 p-4">Have questions about the wedding? Email us at <a class="text-blue-600" href="mailto:alyssastuartwedding@gmail.com">alyssastuartwedding@gmail.com</a></div>
+        <div class="text-center text-gray-600 p-4">Have questions about the wedding? Email us at <a class="text-link" href="mailto:alyssastuartwedding@gmail.com">alyssastuartwedding@gmail.com</a></div>
       </div>
     </div>
 
