@@ -1,6 +1,27 @@
 ---
 layout: default
 ---
-<h1 class="text-5xl font-bold">Bridal Party</h1>
+<h1 class="text-5xl font-bold mb-5">Bridal Party</h1>
 
-<p class="bg-red-600 inline-block px-2 rounded-full text-white">Coming soon</p>
+<div class="flex flex-row gap-4">
+  <div class="w-1/2 divide-y divide-gray-200">
+    <h2 class="text-2xl mb-4">Bridesmaids</h2>
+    {% include person.html name="Kateri" role="Maid of Honor" relationship="Alyssa's Sister" filename="kateri.jpg" %}
+    {% include person.html name="Morgan" role="Maid of Honor" relationship="Alyssa's Sister" filename="morgan.jpg" %}
+    {% include person.html name="Megan" role="Bridesmaid" relationship="BC Roommate" filename="megan.jpg" %}
+    {% include person.html name="Katie" role="Bridesmaid" relationship="BC Roommate" filename="katie.jpg" %}
+    {% include person.html name="Laura" role="Bridesmaid" relationship="Stuart's Sister" filename="laura.jpg" %}
+    {% include person.html name="Caroline" role="Bridesmaid" relationship="Stuart's Sister" filename="caroline.jpg" %}
+    {% include person.html name="Reese" role="Junior Bridesmaid" relationship="Alyssa's Cousin" filename="reese.jpg" %}
+    {% include person.html name="Raegan" role="Junior Bridesmaid" relationship="Alyssa's Cousin" filename="raegan.jpg" %}
+  </div>
+  <div class="w-1/2 divide-y divide-gray-200">
+    <h2 class="text-2xl mb-4">Groomsmen</h2>
+    {% include person.html name="Christian" role="Best Man" relationship="Longtime Friend" filename="christian.jpg" %}
+    {% include person.html name="Tyler" role="Groomsman" relationship="Miami Roommate" filename="tyler.jpg" %}
+    {% include person.html name="Joey" role="Groomsman" relationship="Miami Roommate" filename="joey.jpg" %}
+    {% include person.html name="Nick" role="Groomsman" relationship="Miami Roommate" filename="nick.jpg" %}
+    {% include person.html name="Kevin" role="Groomsman" relationship="Stuart's Brother-in-law" filename="kevin.jpg" %}
+    {% include person.html name="Jason" role="Groomsman" relationship="Stuart's Brother-in-law" filename="jason.jpg" %}
+  </div>
+</div>
