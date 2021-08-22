@@ -1,6 +1,9 @@
 title: Alyssa & Stuart's Wedding
 description: Alyssa & Stuart's wedding 2021
 
+plugins:
+  - jekyll-redirect-from
+
 exclude:
   - Gemfile
   - Gemfile.lock
